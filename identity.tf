@@ -29,6 +29,14 @@ resource "okta_user_schema_property" DOB_extension{
    type= "string"
    master="PROFILE_MASTER"
 }
+resource "okta_user_schema_property" "crn_extension" {
+  index  = "customer_reference_number"
+  title  = "Customer Reference Number"
+  required = true
+  type   = "string"
+  master = "PROFILE_MASTER"
+  depends_on = [okta_user_schema_property.dob_extension]
+}
 
 resource "okta_group" "exampleGroupForTerraformIntegration" {
   name        = "GroupcreatedfromTerraform"
