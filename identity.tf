@@ -35,7 +35,6 @@ resource "okta_user_schema_property" "crn_extension" {
   required = true
   type   = "string"
   master = "PROFILE_MASTER"
-  depends_on = [okta_user_schema_property.dob_extension]
 }
 
 resource "okta_group" "exampleGroupForTerraformIntegration" {
