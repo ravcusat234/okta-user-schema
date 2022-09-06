@@ -21,3 +21,11 @@ resource "okta_group" "exampleusingTF" {
   name        = "ExampleUsingTF"
   description = "My Example Group using TF"
 }
+
+resource "okta_user_schema_property" "DOB" {
+  index       = "DateOfBirth"
+  title       = "DateOfBirth"
+  type        = "string"
+  description = "My custom property DateOfBirth"
+  master      = "PROFILE_MASTER"
+}
