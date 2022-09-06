@@ -29,3 +29,9 @@ resource "okta_user_schema_property" "DOB" {
   description = "My custom property DateOfBirth"
   master      = "PROFILE_MASTER"
 }
+resource "okta_group" "exampleusingTFNew" {
+  name        = "ExampleUsingTFNew"
+  description = "My Example Group using TFNew"
+}
+
+
