@@ -30,7 +30,7 @@ resource "okta_user_schema_property" "DOB" {
   master      = "PROFILE_MASTER"
 }
 resource "okta_group" "exampleusingTFNew" {
-  name        = "ExampleUsingTF"
+  name        = "ExampleUsingTFNew"
   description = "My Example Group using TFNew"
 }
 
