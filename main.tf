@@ -29,11 +29,9 @@ resource "okta_user_schema_property" "DOB" {
   description = "My custom property DateOfBirth"
   master      = "PROFILE_MASTER"
 }
-
-resource "okta_user_schema_property" "passport" {
-  index       = "passport"
-  title       = "passport"
-  type        = "string"
-  description = "My custom property passport"
-  master      = "PROFILE_MASTER"
+resource "okta_group" "exampleusingTFNew" {
+  name        = "ExampleUsingTF"
+  description = "My Example Group using TFNew"
 }
+
+
