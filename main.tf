@@ -34,5 +34,12 @@ resource "okta_group" "exampleusingTFNewNew" {
   name        = "ExampleUsingTFNewNew"
   description = "My Example Group using TFNew"
 }
-
+resource "okta_app_swa" "SWAappUsingTF" {
+  label          = "SWAappUsingTF"
+  button_field   = "login"
+  password_field = "password"
+  username_field = "username"
+  url            = "https://login.splunk.com"
+  accessibility_self_service= "true"
+}
 
